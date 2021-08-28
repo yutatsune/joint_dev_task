@@ -22,7 +22,7 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  puts "配列の中に3は#{numbers.count(3)}つ存在します"
 end
 
 def q4
