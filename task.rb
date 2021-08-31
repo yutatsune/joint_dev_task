@@ -40,8 +40,10 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-  puts array1 == []
-  puts array2 == []
+  # puts array1 == []
+  # puts array2 == []
+  puts array1.empty?
+  puts array2.empty?
 end
 
 def q6
