@@ -50,9 +50,13 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = []
-  numbers1.each do |number|
-    numbers2 << number * 10
+  # numbers2 = []
+  # numbers1.each do |number|
+  #   numbers2 << number * 10
+  # end
+  # puts numbers2
+  numbers2 = numbers1.map do |number|
+    number * 10
   end
   puts numbers2
 end
