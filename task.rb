@@ -137,11 +137,12 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  keys = []
-  data.each_key do |d|
-    keys << d
-  end
-  puts keys
+  # keys = []
+  # data.each_key do |d|
+  #   keys << d
+  # end
+  # puts keys
+  puts data.keys
 end
 
 def q15
