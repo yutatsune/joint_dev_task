@@ -233,7 +233,8 @@ end
 
 class Item
   # 以下を修正して下さい
-  attr_accessor :name
+  # attr_accessor :name
+  attr_reader :name
   def initialize(name:)
     @name = name
   end
@@ -247,7 +248,8 @@ end
 
 class UserQ20
   # 以下に回答を記載
-  attr_accessor :name, :age
+  # attr_accessor :name, :age
+  attr_reader :name, :age
   def initialize(name:, age:)
     @name = name
     @age = age
@@ -256,22 +258,32 @@ end
 
 class Zoo
   # 以下に回答を記載
-  attr_accessor :entry_fee
+  # attr_accessor :entry_fee
   def initialize(name:, entry_fee:)
     @name = name
     @entry_fee = entry_fee
   end
   def info_entry_fee(user)
-    @age = user.age
-    case @age
+    # @age = user.age
+    # case @age
+    # when 0..5
+    #   puts "#{user.name}の入場料金は#{self.entry_fee[:infant]}円です。"
+    # when 6..12
+    #   puts "#{user.name}の入場料金は#{self.entry_fee[:children]}円です。"
+    # when 13..64
+    #   puts "#{user.name}の入場料金は#{self.entry_fee[:adult]}円です。"
+    # when 65..120
+    #   puts "#{user.name}の入場料金は#{self.entry_fee[:senior]}円です。"
+    # end
+    case user.age
     when 0..5
-      puts "#{user.name}の入場料金は#{self.entry_fee[:infant]}円です。"
+      puts "#{user.name}の入場料金は#{@entry_fee[:infant]}円です。"
     when 6..12
-      puts "#{user.name}の入場料金は#{self.entry_fee[:children]}円です。"
+      puts "#{user.name}の入場料金は#{@entry_fee[:children]}円です。"
     when 13..64
-      puts "#{user.name}の入場料金は#{self.entry_fee[:adult]}円です。"
+      puts "#{user.name}の入場料金は#{@entry_fee[:adult]}円です。"
     when 65..120
-      puts "#{user.name}の入場料金は#{self.entry_fee[:senior]}円です。"
+      puts "#{user.name}の入場料金は#{@entry_fee[:senior]}円です。"
     end
   end
 end
